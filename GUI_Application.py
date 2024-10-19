@@ -40,5 +40,5 @@ stock_data = {
     'stock_symbol': ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'TSLA'],
     'closing_price': [150, 2800, 300, 3400, 700],
     'change_percentage': [1.5, 0.5, 2.0, -0.5, 3.2]
-
-    
+}
+df_stock = pd.DataFrame(stock_data)  # Create a DataFrame for stock data
