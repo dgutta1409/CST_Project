@@ -26,3 +26,11 @@ def display_crypto_data():
     result_label.config(text="Fetching crypto data...")  # Show a loading message
     # Run the update_crypto_data function in a separate thread to avoid freezing the GUI
     Thread(target=lambda: update_crypto_data(fetch_crypto_data(coin))).start()
+
+# Function to update the GUI with cryptocurrency data
+def update_crypto_data(data):
+    if data:
+        price = data['market_data']['current_price']['usd']  # Get the price
+        change = data['market_data']['price_change_percentage_24h']  # Get the 24h change
+        crypto_info = f"{data['name']}:\nPrice: ${price:.2f}\n24h Change: {change:.2f}%"  # Display the data
+        result_label.config(text=crypto_info)  # Update the result label with the info
