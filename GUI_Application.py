@@ -66,3 +66,10 @@ def analyze_and_plot_data():
     sns.barplot(x='Parameter', y='Value', data=df)  # Create a bar plot
     plt.title('Stock Data Analysis')  # Set the plot title
     plt.show()  # Show the plot
+
+# GUI Setup
+root = tk.Tk()  # Create the main window
+root.title("Custom Intelligent Application")  # Set the window title
+root.geometry("600x400")  # Set the window size
+
+tab_control = ttk.Notebook(root)  # Create tab control
