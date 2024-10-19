@@ -34,3 +34,11 @@ def update_crypto_data(data):
         change = data['market_data']['price_change_percentage_24h']  # Get the 24h change
         crypto_info = f"{data['name']}:\nPrice: ${price:.2f}\n24h Change: {change:.2f}%"  # Display the data
         result_label.config(text=crypto_info)  # Update the result label with the info
+
+# Static stock data for demonstration purposes
+stock_data = {
+    'stock_symbol': ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'TSLA'],
+    'closing_price': [150, 2800, 300, 3400, 700],
+    'change_percentage': [1.5, 0.5, 2.0, -0.5, 3.2]
+
+    
