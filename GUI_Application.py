@@ -27,6 +27,17 @@ def display_crypto_data():
     # Run the update_crypto_data function in a separate thread to avoid freezing the GUI
     Thread(target=lambda: update_crypto_data(fetch_crypto_data(coin))).start()
 
+# Function to analyze and plot data
+def analyze_and_plot_data():
+    data = {
+        'Parameter': ['Apple', 'Google', 'Microsoft', 'Amazon', 'Tesla'],
+        'Value': [150, 2800, 300, 3400, 700]
+    }
+    df = pd.DataFrame(data)  # Create a DataFrame for the analysis
+
+    plt.figure(figsize=(6, 4))  # Set the figure size for the plot
+    sns.barplot(x='Parameter', y='Value', data=df)  # Create a bar plot
+    plt.title('Stock Data Analysis') 
 # Function to update the GUI with cryptocurrency data
 def update_crypto_data(data):
     if data:
