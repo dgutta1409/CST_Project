@@ -30,13 +30,13 @@ The application is built using the following technologies:
 
 ## Screenshots
 ### Main Interface
-![Cryptocurrency Data](path/to/screenshot1.jpg)
+![Cryptocurrency Data](screenshot1.jpg)
 ### Cryptocurrency Data Fetched
-![Cryptocurrency Data Display](path/to/screenshot2.jpg)
+![Cryptocurrency Data Display](screenshot2.jpg)
 ### Stock Data Fetched
-![Stock Data Display](path/to/screenshot3.jpg)
+![Stock Data Display](screenshot3.jpg)
 ### Data Analysis Visualization
-![Data Analysis](path/to/screenshot4.jpg)
+![Data Analysis](screenshot4.jpg)
 
 ## Setup
 
