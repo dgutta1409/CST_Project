@@ -42,3 +42,18 @@ stock_data = {
     'change_percentage': [1.5, 0.5, 2.0, -0.5, 3.2]
 }
 df_stock = pd.DataFrame(stock_data)  # Create a DataFrame for stock data
+
+# Function to display stock data in the GUI
+def display_stock_data():
+    selected_stock = stock_combobox.get()  # Get the selected stock symbol
+    if not selected_stock:  # Check if a stock is selected
+        messagebox.showwarning("Input Error", "Please select a stock symbol.")
+        return
+
+    # Find the selected stock's data
+    stock_info = df_stock[df_stock['stock_symbol'] == selected_stock]
+    price = stock_info['closing_price'].values[0]
+    change = stock_info['change_percentage'].values[0]
+
+    stock_info_str = f"Stock Symbol: {selected_stock}\nClosing Price: ${price:.2f}\nChange: {change:.2f}%"  # Format the stock info
+    result_label.config(text=stock_info_str)  # Update the result label with the stock data
