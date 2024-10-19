@@ -78,6 +78,14 @@ tab_control = ttk.Notebook(root)  # Create tab control
 crypto_tab = ttk.Frame(tab_control)
 tab_control.add(crypto_tab, text='Cryptocurrency Data')  # Add tab for cryptocurrency
 
+# Tab 2: Stock Data
+stock_tab = ttk.Frame(tab_control)
+tab_control.add(stock_tab, text='Stock Data')  # Add tab for stock data
+
+tk.Label(stock_tab, text="Select Stock Symbol:", font=("Arial", 14)).pack(pady=10)
+stock_combobox = ttk.Combobox(stock_tab, values=['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'TSLA'])
+stock_combobox.pack(pady=5)
+tk.Button(stock_tab, text="Fetch Stock", command=display_stock_data).pack(pady=10)
 tk.Label(crypto_tab, text="Select a Cryptocurrency:", font=("Arial", 14)).pack(pady=10)
 crypto_combobox = ttk.Combobox(crypto_tab, values=['Bitcoin', 'Ethereum', 'Ripple', 'Litecoin', 'Cardano'])
 crypto_combobox.pack(pady=5)
