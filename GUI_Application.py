@@ -54,17 +54,15 @@ stock_data = {
 }
 df_stock = pd.DataFrame(stock_data)  # Create a DataFrame for stock data
 
-# Function to display stock data in the GUI
-def display_stock_data():
-    selected_stock = stock_combobox.get()  # Get the selected stock symbol
-    if not selected_stock:  # Check if a stock is selected
-        messagebox.showwarning("Input Error", "Please select a stock symbol.")
-        return
+# Function to analyze and plot data
+def analyze_and_plot_data():
+    data = {
+        'Parameter': ['Apple', 'Google', 'Microsoft', 'Amazon', 'Tesla'],
+        'Value': [150, 2800, 300, 3400, 700]
+    }
+    df = pd.DataFrame(data)  # Create a DataFrame for the analysis
 
-    # Find the selected stock's data
-    stock_info = df_stock[df_stock['stock_symbol'] == selected_stock]
-    price = stock_info['closing_price'].values[0]
-    change = stock_info['change_percentage'].values[0]
-
-    stock_info_str = f"Stock Symbol: {selected_stock}\nClosing Price: ${price:.2f}\nChange: {change:.2f}%"  # Format the stock info
-    result_label.config(text=stock_info_str)  # Update the result label with the stock data
+    plt.figure(figsize=(6, 4))  # Set the figure size for the plot
+    sns.barplot(x='Parameter', y='Value', data=df)  # Create a bar plot
+    plt.title('Stock Data Analysis')  # Set the plot title
+    plt.show()  # Show the plot
