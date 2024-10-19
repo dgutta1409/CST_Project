@@ -90,3 +90,9 @@ tk.Label(crypto_tab, text="Select a Cryptocurrency:", font=("Arial", 14)).pack(p
 crypto_combobox = ttk.Combobox(crypto_tab, values=['Bitcoin', 'Ethereum', 'Ripple', 'Litecoin', 'Cardano'])
 crypto_combobox.pack(pady=5)
 tk.Button(crypto_tab, text="Fetch Crypto", command=display_crypto_data).pack(pady=10)
+
+# Tab 3: Data Analysis
+analysis_tab = ttk.Frame(tab_control)
+tab_control.add(analysis_tab, text='Data Analysis')  # Add tab for data analysis
+
+tk.Button(analysis_tab, text="Analyze and Plot Data", command=analyze_and_plot_data).pack(pady=20)
