@@ -16,3 +16,13 @@ def fetch_crypto_data(coin):
     except requests.exceptions.RequestException as e:  # Handle errors
         messagebox.showerror("Error", f"Unable to fetch cryptocurrency data: {e}")
         return None
+
+# Function to display cryptocurrency data in the GUI
+def display_crypto_data():
+    coin = crypto_combobox.get().lower().replace(" ", "-")  # Get the selected cryptocurrency
+    if not coin:  # Check if the user selected a valid cryptocurrency
+        messagebox.showwarning("Input Error", "Please select a cryptocurrency.")
+        return
+    result_label.config(text="Fetching crypto data...")  # Show a loading message
+    # Run the update_crypto_data function in a separate thread to avoid freezing the GUI
+    Thread(target=lambda: update_crypto_data(fetch_crypto_data(coin))).start()
