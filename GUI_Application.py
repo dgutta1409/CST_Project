@@ -6,3 +6,13 @@ import matplotlib.pyplot as plt  # For plotting graphs
 import seaborn as sns  # For advanced plotting
 from threading import Thread  # To run processes in parallel (threads)
 
+# Function to fetch cryptocurrency data from the CoinGecko API
+def fetch_crypto_data(coin):
+    url = f"https://api.coingecko.com/api/v3/coins/{coin}"  # API URL
+    try:
+        response = requests.get(url)  # Request data from the API
+        response.raise_for_status()  # Raise an exception if the request fails
+        return response.json()  # Return the API response as JSON
+    except requests.exceptions.RequestException as e:  # Handle errors
+        messagebox.showerror("Error", f"Unable to fetch cryptocurrency data: {e}")
+        return None
