@@ -73,3 +73,12 @@ root.title("Custom Intelligent Application")  # Set the window title
 root.geometry("600x400")  # Set the window size
 
 tab_control = ttk.Notebook(root)  # Create tab control
+
+# Tab 1: Cryptocurrency Data
+crypto_tab = ttk.Frame(tab_control)
+tab_control.add(crypto_tab, text='Cryptocurrency Data')  # Add tab for cryptocurrency
+
+tk.Label(crypto_tab, text="Select a Cryptocurrency:", font=("Arial", 14)).pack(pady=10)
+crypto_combobox = ttk.Combobox(crypto_tab, values=['Bitcoin', 'Ethereum', 'Ripple', 'Litecoin', 'Cardano'])
+crypto_combobox.pack(pady=5)
+tk.Button(crypto_tab, text="Fetch Crypto", command=display_crypto_data).pack(pady=10)
