@@ -96,3 +96,11 @@ analysis_tab = ttk.Frame(tab_control)
 tab_control.add(analysis_tab, text='Data Analysis')  # Add tab for data analysis
 
 tk.Button(analysis_tab, text="Analyze and Plot Data", command=analyze_and_plot_data).pack(pady=20)
+
+# Result Display Section
+result_label = tk.Label(root, text="", font=("Arial", 12), justify="left")
+result_label.pack(pady=20)
+
+tab_control.pack(expand=1, fill='both')  # Pack the tab control to fill the window
+
+root.mainloop()  # Run the main event loop
