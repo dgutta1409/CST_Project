@@ -49,12 +49,12 @@ Make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/repository-name.git
+   git clone https://github.com/dgutta1409/CST_Project.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd repository-name
+   cd CST_Project
    ```
 
 3. Install the required packages:
@@ -91,8 +91,3 @@ Some potential improvements that can be added to the application:
 - More advanced data analysis features, such as historical price charts.
 - Add more cryptocurrencies and stock symbols to the dropdown menus.
 - Enhance the UI with more customization options.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
