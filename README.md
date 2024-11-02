@@ -28,15 +28,25 @@ The application is built using the following technologies:
 - Users can perform basic stock data analysis.
 - A bar plot is generated showing stock data for companies like Apple, Google, Microsoft, Amazon, and Tesla.
 
-## Screenshots
-### Main Interface
-![Cryptocurrency Data](screenshot1.jpg)
-### Cryptocurrency Data Fetched
-![Cryptocurrency Data Display](screenshot2.jpg)
-### Stock Data Fetched
-![Stock Data Display](screenshot3.jpg)
-### Data Analysis Visualization
-![Data Analysis](screenshot4.jpg)
+## Features
+- Fetches real-time cryptocurrency data from the **CoinGecko API**.
+- User-friendly GUI built using **Tkinter** with tabbed navigation.
+- Includes basic data analysis and plotting functionalities.
+- Displays cryptocurrency prices and 24-hour percentage changes.
+- Visualizes predefined cryptocurrency data through a bar chart.
+
+## Project Structure
+- `main.py`: The main application file containing the GUI and logic.
+- `data_fetch.py`: Handles cryptocurrency data retrieval from the CoinGecko API.
+- `data_analysis.py`: Contains data analysis and visualization logic.
+  
+## Requirements
+This project requires Python 3.x and the following Python libraries:
+- `requests`: To handle API requests and retrieve cryptocurrency data.
+- `pandas`: For handling and processing data.
+- `matplotlib`: For data visualization (charts, plots).
+- `seaborn`: For enhanced visualization styles (based on matplotlib).
+- `tkinter`: The default Python library for GUI development.
 
 ## Setup
 
@@ -73,10 +83,46 @@ pip install requests pandas matplotlib seaborn
 To run the application, execute the following command in the terminal or command prompt:
 
 ```bash
-python gui_application.py
+python GUI_Application.py
 ```
 
 This will launch the GUI, where you can interact with the application to fetch cryptocurrency and stock data or perform data analysis.
+
+## Usage Guide
+
+### GUI Tabs:
+1. **Cryptocurrency Data**
+   - Choose a cryptocurrency from the dropdown list (e.g., Bitcoin, Ethereum, Ripple).
+   - Click on "Fetch Crypto" to retrieve the latest price and 24-hour price change.
+
+2. **Data Analysis**
+   - Click "Analyze and Plot Data" to generate a bar chart displaying predefined data on cryptocurrency prices and 24-hour changes.
+
+### Modules Overview
+
+**main.py**
+- **Functionality:** Sets up the application's graphical user interface (GUI) using Tkinter.
+- Integrates with `data_fetch.py` to fetch and display real-time data.
+- Utilizes `data_analysis.py` for basic data analysis and visualization.
+
+**data_fetch.py**
+- **Functionality:** Fetches current cryptocurrency data from the CoinGecko API.
+- Includes error handling for failed requests or unexpected data.
+
+**data_analysis.py**
+- **Functionality:** Leverages Pandas and Seaborn to analyze predefined cryptocurrency data.
+- Plots a bar chart to visualize prices and percentage changes.
+
+## Screenshots
+### Main Interface
+![Cryptocurrency Data](screenshot1.jpg)
+### Cryptocurrency Data Fetched
+![Cryptocurrency Data Display](screenshot2.jpg)
+### Stock Data Fetched
+![Stock Data Display](screenshot3.jpg)
+### Data Analysis Visualization
+![Data Analysis](screenshot4.jpg)
+
 
 ## API Information
 
