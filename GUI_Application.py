@@ -101,6 +101,7 @@ tab_control.add(analysis_tab, text='Data Analysis')
 
 tk.Button(analysis_tab, text="Analyze and Plot Data", command=analyze_and_plot_data).pack(pady=20)
 
+
 # Result Display Section
 result_label = tk.Label(root, text="", font=("Arial", 12), justify="left")
 result_label.pack(pady=20)
